@@ -1,0 +1,1 @@
+export const symbols=['SMI','SLI','SXGE','SPI20','SMIM','SMIEXP','SPIEX','SBO100','SSIRT'];

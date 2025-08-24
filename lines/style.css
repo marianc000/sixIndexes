@@ -1,0 +1,26 @@
+.chart {
+    width: 100%;
+    height: 89vh;
+    background-color: aliceblue;
+}
+
+body {
+    margin: 0;
+}
+
+.period>* {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+html {
+    font-family: Arial;
+    font-size: 1rem;
+}
+select{
+    font-size: 1em;
+}
+.controls {
+ 
+    text-align: center;
+}
