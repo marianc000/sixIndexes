@@ -26,17 +26,18 @@ export function fromYYYYMMDD(str) {
         day = num(6);
     return new Date(year, month, day);
 }
-
+new Date().toLocaleString('en-us', {  weekday: 'narrow' })
 export function dateToStr(ms) {
 
     const d = new Date(ms);
 
-    let year = d.getFullYear(),
+    let year = d.getFullYear().toString().substring(2),
         month = pad2(d.getMonth() + 1),
         day = pad2(d.getDate()),
         hours = pad2(d.getHours()),
         mins = pad2(d.getMinutes()),
-        secs = pad2(d.getSeconds());
+        secs = pad2(d.getSeconds()),
+        weekday=d.toLocaleString('en-us', {  weekday: 'short' });
 
-    return [year, month, day].join('-') + ' ' + [hours, mins].join(':');
+    return weekday+' '+[year, month, day].join('-') + ' ' + [hours, mins].join(':');
 }

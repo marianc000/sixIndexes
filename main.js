@@ -23,8 +23,11 @@ async function drawChart() {
     hAxis: {
       textStyle: {  
         fontSize: 10,
+        fontName:'Arial',
+        bold:true
       },
-       slantedTextAngle:90
+       slantedTextAngle:90,
+       minTextSpacing:1
     } 
   };
   var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
