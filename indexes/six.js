@@ -1,5 +1,5 @@
 import { getUrl, processResponse, get } from "./request.js";
-import { symbols } from "./symbols.js";
+import { symbols } from "./constants.js";
 
 export function sixData(months) {
   console.log(months);

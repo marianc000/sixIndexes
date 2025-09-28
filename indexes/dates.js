@@ -26,7 +26,7 @@ export function fromYYYYMMDD(str) {
         day = num(6);
     return new Date(year, month, day);
 }
-// new Date().toLocaleString('en-us', {  weekday: 'narrow' })
+new Date().toLocaleString('en-us', {  weekday: 'narrow' })
 export function dateToStr(ms) {
 
     const d = new Date(ms);
@@ -37,7 +37,7 @@ export function dateToStr(ms) {
         hours = pad2(d.getHours()),
         mins = pad2(d.getMinutes()),
         secs = pad2(d.getSeconds()),
-        weekday = d.toLocaleString('en-us', { weekday: 'short' });
+        weekday=d.toLocaleString('en-us', {  weekday: 'short' });
 
-    return weekday + ' ' + [year, month, day].join('-') + ' ' + [hours, mins].join(':');
+    return weekday+' '+[year, month, day].join('-') + ' ' + [hours, mins].join(':');
 }

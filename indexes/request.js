@@ -1,6 +1,5 @@
 import { subtractMonths, dateToYYYYMMDD } from "./dates.js";
 import { dateToStr } from "./dates.js";
-import { symbolToName } from "./symbols.js";
 
 export function get(url) {
     return fetch(url).then(r => r.json());
@@ -35,7 +34,7 @@ function addDates(data) {
             d.setMinutes(0);
             d.setSeconds(0);
             d.setMilliseconds(0);
-            return d.getTime(); //cannot compare dates
+            return d;
         }),
         closeRelToLast: data.Close.map(v => v / lastClose)
     };
@@ -52,53 +51,18 @@ function processResponse2({ ValorSymbol, data }) {
 export function processResponse(o) {
     const r = o.valors.sort((a, b) => a.ValorSymbol.localeCompare(b.ValorSymbol)).map(processResponse2);
 
-    const dts = r.map(o => o.data.dt);
+    const rows = [['Date', ...r.map(o => o.ValorSymbol)]];
+    const times = r[0].data.dt;
 
-    const allDts = [...new Set(dts.flat())].sort();
-    console.log('>processResponse', r, dts, allDts.map(n => new Date(n)));
-
-    const headers = r.map(o => symbolToName(o.ValorSymbol));
-    console.log('>processResponse2', headers);
-
-    const rows = [['Date', ...headers]];
-
-
-    allDts.forEach((d, i) => {
-        r.forEach(({ data: { dt, closeRelToLast } }, j) => {
-            if (dt[i] !== d) {
-                dt.splice(i, 0, d);
-                if (i < 1) {
-                    console.log('Start from null');
-                    closeRelToLast.splice(i, 0, closeRelToLast[i])
-                } else {
-                    closeRelToLast.splice(i, 0, closeRelToLast[i - 1])
-                }
-            }
-        });
-    });
-
-    allDts.forEach((d, i) => {
+    times.forEach((d, i) => {
         r.forEach(o => {
-            if (o.data.dt[i] !== d) {
-                throw Error('not equal ' + i + ' ' + rows[0][i + 1] + ' ' + new Date(d) + ' ' + new Date(o.data.dt[i]));
-            }
-
-            if (!o.data.closeRelToLast[i]) {
-                throw Error('empty ' + i + ' ' + rows[0][i + 1] + ' ' + new Date(d) + ' ' + new Date(o.data.dt[i]));
-
-            }
+            if (o.data.dt[i].getTime() !== d.getTime())
+                throw 'not equal ' + ar[i].getTime() + ' ' + d.getTime();
         });
 
         rows.push([dateToStr(d), ...r.map(o => o.data.closeRelToLast[i])]);
     });
 
-    console.log('r', rows);
-
-    rows[0].push('AVG');
-    rows.slice(1).forEach(ar => ar.push(avg(ar.slice(1))));
+    console.log('r', rows)
     return rows;
-}
-
-function avg(ar) {
-    return ar.reduce((p, c) => p + c, 0) / ar.length;
 }

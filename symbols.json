@@ -1,0 +1,134 @@
+[
+    {
+        "name": "Holcim Ltd",
+        "code": "HOLN"
+    },
+    {
+        "name": "Glarner Kantonalbank",
+        "code": "GLKBN"
+    },
+    {
+        "name": "Sandoz Group Ltd",
+        "code": "SDZ"
+    },
+    {
+        "name": "Sika Ltd",
+        "code": "SIKA"
+    },
+    {
+        "name": "Lonza Group Ltd",
+        "code": "LONN"
+    },
+    {
+        "name": "Luzerner Kantonalbank",
+        "code": "LUKN"
+    },
+    {
+        "name": "Basler Kantonalbank",
+        "code": "BSKP"
+    },
+    {
+        "name": "Banque Cantonale Vaudoise",
+        "code": "BCVN"
+    },
+    {
+        "name": "Banque Cantonale de Geneve",
+        "code": "BCGE"
+    },
+    {
+        "name": "Bell Food Group AG",
+        "code": "BELL"
+    },
+    {
+        "name": "Novartis AG",
+        "code": "NOVN"
+    },
+    {
+        "name": "Georg Fischer Ltd",
+        "code": "GF"
+    },
+    {
+        "name": "Nestle SA",
+        "code": "NESN"
+    },
+    {
+        "name": "Alcon Inc.",
+        "code": "ALC"
+    },
+    {
+        "name": "Liechtensteinische Landesbank AG",
+        "code": "LLBN"
+    },
+    {
+        "name": "Galderma Group Ltd",
+        "code": "GALD"
+    },
+    {
+        "name": "Siegfried AG",
+        "code": "SFZN"
+    },
+    {
+        "name": "Banque Cantonale du Jura",
+        "code": "BCJ"
+    },
+    {
+        "name": "Kuros Biosciences AG",
+        "code": "KURN"
+    },
+    {
+        "name": "Sonova Holding AG",
+        "code": "SOON"
+    },
+    {
+        "name": "Roche Holding AG",
+        "code": "ROG"
+    },
+    {
+        "name": "Clariant AG",
+        "code": "CLN"
+    },
+    {
+        "name": "Schweiter Technologies AG",
+        "code": "SWTQ"
+    },
+    {
+        "name": "Bachem AG",
+        "code": "BANB"
+    },
+    {
+        "name": "Straumann Holding Ltd",
+        "code": "STMN"
+    },
+    {
+        "name": "COSMO Pharmaceuticals SA",
+        "code": "COPN"
+    },
+    {
+        "name": "IVF HARTMANN Holding AG",
+        "code": "VBSN1"
+    },
+    {
+        "name": "COLTENE N",
+        "code": "CLTN"
+    },
+    {
+        "name": "Basilea Pharmaceutica Ltd",
+        "code": "BSLN"
+    },
+    {
+        "name": "CPH Group AG",
+        "code": "CPHN"
+    },
+    {
+        "name": "Medmix AG",
+        "code": "MEDX"
+    },
+    {
+        "name": "Comet Holding AG",
+        "code": "COTN"
+    },
+    {
+        "name": "VAT Group Ltd",
+        "code": "VACN"
+    }
+]
